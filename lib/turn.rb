@@ -2,7 +2,7 @@
 #   puts "Please enter 1-9:"
 #   input = gets.strip
 #   index = input_to_index(input)
-# 
+#
 #   until valid_move?(board, index) == true
 #     "Invalid move. Please enter 1-9."
 #     input = gets.strip
@@ -20,7 +20,7 @@
     else
       turn(board)
 
-    
+
     end
 
 
