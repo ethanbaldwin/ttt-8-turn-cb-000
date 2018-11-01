@@ -1,17 +1,29 @@
-def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
+# def turn(board)
+#   puts "Please enter 1-9:"
+#   input = gets.strip
+#   index = input_to_index(input)
+# 
+#   until valid_move?(board, index) == true
+#     "Invalid move. Please enter 1-9."
+#     input = gets.strip
+#     index = input_to_index(input)
+#   end
 
-  until valid_move?(board, index) == true
-    "Invalid move. Please enter 1-9."
+  def turn(board)
+    puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
-  end
+
+    if valid_move?(board, index) == true
+      move(board, index, value = "X")
+      display_board(board)
+    else
+      turn(board)
+
+    
+    end
 
 
-  move(board, index, value = "X")
-  display_board(board)
 end
 
 def display_board(board)
